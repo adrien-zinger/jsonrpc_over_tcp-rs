@@ -39,10 +39,10 @@ fn exec_cmd(script: &str, input: String) -> std::io::Result<Option<String>> {
         if let Ok(res) = String::from_utf8(output.stdout) {
             Ok(Some(res))
         } else {
-            todo!()
+            Ok(Some("error server".into()))
         }
     } else {
-        todo!()
+        Ok(Some("error server".into()))
     }
 }
 
